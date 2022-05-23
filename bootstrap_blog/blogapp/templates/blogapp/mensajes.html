@@ -1,0 +1,78 @@
+{% extends 'blogapp\layout.html' %}
+
+{% block li%}
+
+  <li class="nav-item mx-0 mx-lg-1">
+    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'index' %}">Inicio</a>
+  </li>
+  <li class="nav-item mx-0 mx-lg-1">
+    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'usuarios' %}">Usuarios</a>
+  </li>
+  <li class="nav-item mx-0 mx-lg-1">
+    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'ingreso' %}">Ingresar Cliente</a>
+  </li>
+  
+  
+{% endblock%} 
+
+
+{% block content%}
+
+<!-- Seccion Lista de Usuarios -->
+<section class="page-section" id="lista_mensajes">
+    <div class="container">
+
+        <!-- Contact Section Heading -->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Listado Mensajes</h2>
+
+        <!-- Icon Divider -->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="divider-custom-line"></div>
+        </div>
+
+        <!-- <div class="row">
+          <div class="col-sm-12 p-3 border" style="background-color: #ebebfa">
+  
+              <h3>Datos de Clientes</h3>
+          
+                  <div class="table-responsive align-middle"> 
+          
+                      <table id="clientes" class="table table-striped"> 
+          
+                          <thead>  -->
+
+
+
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tr class="bg-primary">
+                    <th scope="col" >Id</th>
+                    <th scope="col" >Nombre</th>
+                    <th scope="col" >Correo</th>
+                    <th scope="col" >Mensaje</th>
+                    <th scope="col" >TipoMensaje</th>
+                </tr>
+                {% for msg in data %}
+                <tr>
+                    <td class="bg-primary">{{msg.id}}</td>
+                    <td class="bg-primary">{{msg.nombre}}</td>
+                    <td class="bg-primary">{{msg.correo}}</td>
+                    <td class="bg-primary">{{msg.mensaje}}</td>
+                    <td class="bg-primary">{{msg.tipo_mensaje.tipo_mensaje}}</td>
+                    <td>
+                      <a href= "{% url 'mensaje_edit'  msg.pk %}" class="btn btn-info">Editar</a> 
+                      <a href= "{% url 'mensaje_delete' msg.pk %}" class="btn btn-danger">Eliminar</a> </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</section>
+
+{% endblock%} 
+

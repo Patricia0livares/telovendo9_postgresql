@@ -1,0 +1,43 @@
+{% extends 'blogapp/layout.html' %}
+{% block li%}
+
+<li class="nav-item mx-0 mx-lg-1">
+  <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'index' %}">Inicio</a>
+</li>
+
+{% endblock%}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<!-- Seccion Ingreso de Mensaje -->
+<section class="page-section" id="ingreso_mensaje">
+  <div class="container">
+
+    <!-- Contact Section Heading -->
+    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Ingreso de Mensajes</h2>
+
+    <!-- Icon Divider -->
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon">
+        <i class="fas fa-star"></i>
+      </div>
+      <div class="divider-custom-line"></div>
+    </div>
+
+    <!-- Ingreso de Mensaje Section Form -->
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <form method="post">
+          {% csrf_token %}
+          {{formp|crispy}}
+          <input type="submit"></input>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

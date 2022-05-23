@@ -1,0 +1,64 @@
+{% extends 'blogapp\layout.html' %}
+
+{% block li%}
+
+  <li class="nav-item mx-0 mx-lg-1">
+    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'index' %}">Inicio</a>
+  </li>
+  <li class="nav-item mx-0 mx-lg-1">
+    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#lista_usuario">Usuarios</a>
+  </li>
+  <li class="nav-item mx-0 mx-lg-1">
+    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'ingreso' %}">Ingresar Cliente</a>
+  </li>
+  
+  
+{% endblock%} 
+
+
+{% block content%}
+
+<!-- Seccion Lista de Usuarios -->
+<section class="page-section" id="lista_usuario">
+    <div class="container">
+
+        <!-- Contact Section Heading -->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Listado Usuarios</h2>
+
+        <!-- Icon Divider -->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <tr class="bg-primary">
+                    <th scope="col" >Nombre</th>
+                    <th scope="col" >Apellido Paterno</th>
+                    <th scope="col" >Apellido Materno</th>
+                    <th scope="col" >Correo</th>
+                    <th scope="col" >Pais</th>
+                </tr>
+                {% for cli in data %}
+                <tr>
+                    <td class="bg-primary">{{cli.nombre}}</td>
+                    <td class="bg-primary">{{cli.apellido}}</td>
+                    <td class="bg-primary">{{cli.apellidoM}}</td>
+                    <td class="bg-primary">{{cli.correo}}</td>
+                    <td class="bg-primary">{{cli.pais}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+{% endblock %}
