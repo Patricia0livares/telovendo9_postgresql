@@ -1,4 +1,4 @@
-**TeLoVendoPOD **
+## TeLoVendoPOD
 ## Tabla de Contenidos
 
 ## Informacion General 
@@ -17,7 +17,7 @@ Este proyecto fue creado usando:
 **Proyecto basado en el template gratuito de la siguiente página:**
 -https://startbootstrap.com/theme/freelancer
 
-![imagen1](bootstrap_blog/bootstrap_blog/static/img/ima1readme.png)
+![imagen1](bootstrap_blog/static/img/ima1readme.png)
 
 	
 ## Instalacion
