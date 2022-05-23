@@ -71,7 +71,7 @@ Más información para la correcta instalación en:
 https://docs.djangoproject.com/en/4.0/ref/databases/
 
 ## Librerias usadas
- 
+![imagen2](bootstrap_blog/static/img/ima2readme.png)
 
 
 
