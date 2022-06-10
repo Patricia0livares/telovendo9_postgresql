@@ -3,11 +3,11 @@
 ## TeLoVendoPOD
 ## Tabla de Contenidos
 
-## Informacion General 
-Aplicación para ofrecer sercvios de gestión de formularios, y recibir antecedentes de desarrolladores.
+## Información General 
+Aplicación para ofrecer servicios de gestión de formularios, y recibir antecedentes de desarrolladores.
 Restringe acceso a usuario no registrado a página de inicio solamente, y restricciones según usuario: grupo administradorcliente, grupo administradorproveedor y un tercer grupo administrador_tlv con acceso a gestión de clientes y proveedores.
 	
-## Tecnologias
+## Tecnologías
 Este proyecto fue creado usando:
 * HTML
 * CSS
@@ -22,7 +22,7 @@ Este proyecto fue creado usando:
 ![imagen1](bootstrap_blog/static/img/ima1readme.png)
 
 	
-## Instalacion
+## Instalación
 Puede descargar este proyecto desde https://github.com/Patricia0livares
 
 ## Instrucciones para instalación
@@ -72,7 +72,7 @@ Puede descargar este proyecto desde https://github.com/Patricia0livares
 Más información para la correcta instalación en:
 https://docs.djangoproject.com/en/4.0/ref/databases/
 
-## Librerias usadas
+## Librerías usadas
 ![imagen2](bootstrap_blog/static/img/ima2readme.png)
 
 
